@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 //Setup Partial templates with hbs
@@ -77,5 +78,5 @@ app.get('/bad',(req,resp)=>{
 
 //app.listen takes a parameter for port number
 //Second parameter is a method that is used to provides information to user
-app.listen(3000 , ()=>{ console.log('Infor:Server is up and running!!!')
+app.listen(port , ()=>{ console.log(`Info:Server is up and running on port ${port}!`)
  }  );
