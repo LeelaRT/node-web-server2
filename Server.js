@@ -76,6 +76,14 @@ app.get('/bad',(req,resp)=>{
   resp.send( {request: 'Bad Request', errorMessage: 'Sorry could not fulfill your request!'} );
 });
 
+app.get('/TestPage1',(req,res)=>{
+  res.render('TestPage1.hbs',{pageTitle:'TestPage1'})
+}  );
+
+app.get('/TestPage2',(req,res)=>{
+  res.render('TestPage2.hbs',{pageTitle:'TestPage2'})
+}  );
+
 //app.listen takes a parameter for port number
 //Second parameter is a method that is used to provides information to user
 app.listen(port , ()=>{ console.log(`Info:Server is up and running on port ${port}!`)
